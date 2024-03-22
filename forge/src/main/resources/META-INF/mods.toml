@@ -14,13 +14,13 @@ description = "    This mod increases the biome color blending radius and replac
 [[dependencies.betterbiomeblend]]
 modId = "forge"
 mandatory = true
-versionRange = "[41,)"
+versionRange = "[47,)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.betterbiomeblend]]
 modId = "minecraft"
 mandatory = true
-versionRange = "[1.19.0,)"
+versionRange = "[1.20,)"
 ordering = "NONE"
 side = "BOTH"
