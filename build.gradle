@@ -10,10 +10,6 @@ forgix {
     outputDir = "build/libs/merged"
 }
 
-architectury {
-    minecraft = rootProject.minecraft_version
-}
-
 subprojects {
     apply plugin: "dev.architectury.loom"
 
