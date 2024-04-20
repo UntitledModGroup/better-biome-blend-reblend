@@ -78,6 +78,10 @@ public abstract class MixinClientLevel extends Level implements LevelCacheAccess
         betterBiomeBlend$blendColorCache.invalidateChunk(chunkX, chunkZ);
     }
 
+    /**
+     * @FionaTheMortal
+     * @reason
+     */
     @Overwrite
     public int
     getBlockTint(BlockPos blockPosIn, @NotNull ColorResolver colorResolverIn)
