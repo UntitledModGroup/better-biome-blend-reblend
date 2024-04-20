@@ -79,8 +79,8 @@ public abstract class MixinClientLevel extends Level implements LevelCacheAccess
     }
 
     /**
-     * @FionaTheMortal
-     * @reason
+     * @author FionaTheMortal
+     * @reason Overwrite the original method to use the custom color blending algorithm.
      */
     @Overwrite
     public int
