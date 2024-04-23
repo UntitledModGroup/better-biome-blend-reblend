@@ -9,7 +9,6 @@ import fionathemortal.betterbiomeblend.common.debug.DebugEventType;
 import fionathemortal.betterbiomeblend.common.util.Color;
 import fionathemortal.betterbiomeblend.common.util.MathUtil;
 import fionathemortal.betterbiomeblend.common.util.Random;
-import fionathemortal.betterbiomeblend.common.util.Math;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
