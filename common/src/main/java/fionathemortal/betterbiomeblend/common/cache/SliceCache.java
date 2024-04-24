@@ -7,6 +7,7 @@ import it.unimi.dsi.fastutil.longs.Long2ObjectLinkedOpenHashMap;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.StampedLock;
 
+@SuppressWarnings("unchecked")
 public abstract class SliceCache<T extends Slice>
 {
     public final static int BUCKET_COUNT = 8;
