@@ -8,7 +8,7 @@ If the creator makes a update using this update, the mod will be taken down and 
 The main difference is that we use LGPL v3 because of Architectury API also having it.
 
 ### Current Progress:
-Published on Modrinth
-Dependencies are loaded and building starts
-Fixed error that somehow doesn't apply to 1.19.2 or they were updating the json within the jar *scary*
-One error remaining, only around 5 more keyboard smashes remaining
+Published on Modrinth 
+<br>Dependencies are loaded and building starts
+<br>Fixed error that somehow doesn't apply to 1.19.2 or they were updating the json within the jar *scary*
+<br>One error remaining, only around 5 more keyboard smashes remaining
