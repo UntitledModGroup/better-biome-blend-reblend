@@ -47,7 +47,7 @@ public abstract class MixinClientWorld extends Level
     MixinClientWorld(
             WritableLevelData        writableLevelData,
             ResourceKey<Level>       resourceKey,
-            RegistryAccess registryAccess,
+            RegistryAccess           registryAccess,
             Holder<DimensionType>    holder,
             Supplier<ProfilerFiller> supplier,
             boolean                  bl,
