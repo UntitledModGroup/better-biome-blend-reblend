@@ -9,6 +9,7 @@ import fionathemortal.betterbiomeblend.common.debug.DebugEventType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.ColorResolver;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
@@ -120,7 +121,7 @@ public final class ColorBlending
     {
         Biome result = null;
 
-        Holder<Biome> biomeHolder = world.registryAccess().registryOrThrow(Registry.BIOME_REGISTRY).getHolderOrThrow(Biomes.PLAINS);
+        Holder<Biome> biomeHolder = world.registryAccess().registryOrThrow(Registries.BIOME).getHolderOrThrow(Biomes.PLAINS);
 
         if (biomeHolder.isBound())
         {

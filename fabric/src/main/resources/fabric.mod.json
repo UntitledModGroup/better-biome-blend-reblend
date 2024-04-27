@@ -9,8 +9,8 @@
     "UTMG"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://discord.gg/xrcraft-947244318740054149",
+    "sources": "https://github.com/UntitledModGroup/better-biome-blend-reblend"
   },
   "license": "LGPL",
   "icon": "assets/betterbiomeblend/icon.png",
@@ -26,6 +26,6 @@
   ],
   "depends": {
     "fabric": "*",
-    "minecraft": ">=1.19.2"
+    "minecraft": "1.20.x"
   }
 }

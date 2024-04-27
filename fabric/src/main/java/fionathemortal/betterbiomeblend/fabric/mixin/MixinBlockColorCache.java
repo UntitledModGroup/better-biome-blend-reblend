@@ -4,8 +4,11 @@ import fionathemortal.betterbiomeblend.common.ColorCaching;
 import fionathemortal.betterbiomeblend.fabric.SodiumColorBlending;
 import it.unimi.dsi.fastutil.objects.Reference2ReferenceOpenHashMap;
 import me.jellysquid.mods.sodium.client.world.WorldSlice;
-import me.jellysquid.mods.sodium.client.world.biome.BlockColorCache;
+import me.jellysquid.mods.sodium.client.world.biome.BiomeColorCache;
 
+
+import me.jellysquid.mods.sodium.client.world.biome.BiomeSlice;
+import me.jellysquid.mods.sodium.client.world.cloned.ChunkRenderContext;
 import net.minecraft.core.SectionPos;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.ColorResolver;
@@ -16,9 +19,8 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.spongepowered.asm.mixin.Shadow;
 
-@Mixin(value = BlockColorCache.class)
+@Mixin(value = BiomeColorCache.class)
 public class MixinBlockColorCache
 {
     @Unique
@@ -33,17 +35,18 @@ public class MixinBlockColorCache
     @Unique
     private Reference2ReferenceOpenHashMap<ColorResolver, int[]> betterbiomeblend$colors;
 
-    @Shadow
+    @Unique
     private WorldSlice slice;
 
     @Inject(
-        method = "<init>",
-        at = @At("TAIL")
+        method = "update",
+        at = @At("TAIL"),
+            remap = false
     )
     public void
-    constructorTail(WorldSlice slice, int radius, CallbackInfo ci)
+    constructorTail(ChunkRenderContext context, CallbackInfo ci)
     {
-        SectionPos pos = slice.getOrigin();
+        SectionPos pos = context.getOrigin();
 
         this.betterbiomeblend$baseX = pos.minBlockX();
         this.betterbiomeblend$baseY = pos.minBlockY();
@@ -52,6 +55,10 @@ public class MixinBlockColorCache
         this.betterbiomeblend$colors = new Reference2ReferenceOpenHashMap<>();
     }
 
+    /**
+     * @author fionathemortal
+     * @reason Reimplement the getColor method to use our color cache and generate colors when necessary
+     */
     @Overwrite(remap = false)
     public int
     getColor(ColorResolver resolver, int posX, int posY, int posZ)
@@ -66,9 +73,9 @@ public class MixinBlockColorCache
 
         int color = colors[index];
 
-        if (color == 0)
+       /* if (color == 0)
         {
-            BiomeManager biomeManager = slice.getBiomeAccess();
+            BiomeManager biomeManager = slice.();
 
             SodiumColorBlending.generateColors(
                 biomeManager,
@@ -79,7 +86,7 @@ public class MixinBlockColorCache
                 colors);
 
             color = colors[index];
-        }
+        }*/
 
         return color;
     }
