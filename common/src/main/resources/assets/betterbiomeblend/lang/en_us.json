@@ -7,6 +7,6 @@
   "options.biomeBlendRadius.27": "27x27 (Elevated)",
   "options.biomeBlendRadius.29": "29x29 (WOAH!)",
 
-  "bbb.biomeBlendRadius" : "Better Biome Blend",
-  "bbb.biomeBlendRadius.tooltip" : "Controls the blend radius used by Better Biome Blend. "
+  "bbb.biomeBlendRadius" : "Better Biome ReBlend",
+  "bbb.biomeBlendRadius.tooltip" : "Controls the blend radius used by Better Biome ReBlend. "
 }
