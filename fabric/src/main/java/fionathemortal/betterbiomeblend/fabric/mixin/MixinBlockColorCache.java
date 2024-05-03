@@ -73,7 +73,7 @@ public class MixinBlockColorCache
 
         int color = colors[index];
 
-       /* if (color == 0)
+        if (color == 0)
         {
             BiomeManager biomeManager = slice.();
 
@@ -86,7 +86,7 @@ public class MixinBlockColorCache
                 colors);
 
             color = colors[index];
-        }*/
+        }
 
         return color;
     }
