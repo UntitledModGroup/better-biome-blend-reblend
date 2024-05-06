@@ -75,7 +75,7 @@ public class MixinBlockColorCache
 
         if (color == 0)
         {
-            BiomeManager biomeManager = slice./* THIS NEEDS TO BE FILLED IN */();
+            BiomeManager biomeManager = slice.getBiomeAccess();
 
             SodiumColorBlending.generateColors(
                 biomeManager,
