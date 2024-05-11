@@ -4,11 +4,8 @@ import fionathemortal.betterbiomeblend.common.ColorCaching;
 import fionathemortal.betterbiomeblend.fabric.SodiumColorBlending;
 import it.unimi.dsi.fastutil.objects.Reference2ReferenceOpenHashMap;
 import me.jellysquid.mods.sodium.client.world.WorldSlice;
-import me.jellysquid.mods.sodium.client.world.biome.BiomeColorCache;
+import me.jellysquid.mods.sodium.client.world.biome.BlockColorCache;
 
-
-import me.jellysquid.mods.sodium.client.world.biome.BiomeSlice;
-import me.jellysquid.mods.sodium.client.world.cloned.ChunkRenderContext;
 import net.minecraft.core.SectionPos;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.ColorResolver;
@@ -19,8 +16,9 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.Shadow;
 
-@Mixin(value = BiomeColorCache.class)
+@Mixin(value = BlockColorCache.class)
 public class MixinBlockColorCache
 {
     @Unique
@@ -39,14 +37,15 @@ public class MixinBlockColorCache
     private WorldSlice slice;
 
     @Inject(
-        method = "update",
-        at = @At("TAIL"),
+            method = "update",
+            at = @At("TAIL"),
             remap = false
     )
+
     public void
-    constructorTail(ChunkRenderContext context, CallbackInfo ci)
+    constructorTail(WorldSlice slice, int radius, CallbackInfo ci)
     {
-        SectionPos pos = context.getOrigin();
+        SectionPos pos = slice.getOrigin();
 
         this.betterbiomeblend$baseX = pos.minBlockX();
         this.betterbiomeblend$baseY = pos.minBlockY();
@@ -54,7 +53,6 @@ public class MixinBlockColorCache
 
         this.betterbiomeblend$colors = new Reference2ReferenceOpenHashMap<>();
     }
-
     /**
      * @author fionathemortal
      * @reason Reimplement the getColor method to use our color cache and generate colors when necessary
@@ -78,12 +76,12 @@ public class MixinBlockColorCache
             BiomeManager biomeManager = slice.getBiomeAccess();
 
             SodiumColorBlending.generateColors(
-                biomeManager,
-                resolver,
-                blockX + this.betterbiomeblend$baseX,
-                blockY + this.betterbiomeblend$baseY,
-                blockZ + this.betterbiomeblend$baseZ,
-                colors);
+                    biomeManager,
+                    resolver,
+                    blockX + this.betterbiomeblend$baseX,
+                    blockY + this.betterbiomeblend$baseY,
+                    blockZ + this.betterbiomeblend$baseZ,
+                    colors);
 
             color = colors[index];
         }
