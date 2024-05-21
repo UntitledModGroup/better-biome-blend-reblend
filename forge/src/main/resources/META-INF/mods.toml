@@ -1,26 +1,29 @@
 modLoader = "javafml"
-loaderVersion = "[41,)"
-issueTrackerURL = "https://github.com/UntitledModGroup/better-biome-blend-reblend"
-license = "LGPL"
+loaderVersion = "[34,)"
+issueTrackerURL = "https://github.com/UntitledModGroup/better-biome-blend-reblend/issues"
+displayURL = "https://modrinth.com/mod/bbrb"
+license = "GNU LGPLv3"
 
 [[mods]]
-modId = "betterbiomereblend"
+modId = "betterbiomeblend"
 version = "${version}"
-displayName = "Better Biome ReBlend"
-authors = "FionaTheMortal"
-description = "    This mod increases the biome color blending radius and replaces the original blending algorithm with a more efficient one."
-#logoFile = ""
+displayName = "Better Biome Reblend"
+authors = "FionaTheMortal + UTMG"
+description = '''
+This mod increases the biome color blending radius and replaces the original blending algorithm with a more efficient one.
+'''
+#logofile = ""
+
+[[dependencies.betterbiomeblend]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20,1.20.1,1.20.2,1.20.3,1.20.4,1.20.5,1.20.6]"
+ordering="NONE"
+side = "CLIENT"
 
 [[dependencies.betterbiomeblend]]
 modId = "forge"
 mandatory = true
 versionRange = "[41,)"
 ordering = "NONE"
-side = "BOTH"
-
-[[dependencies.betterbiomeblend]]
-modId = "minecraft"
-mandatory = true
-versionRange = "[1.20.0,)"
-ordering = "NONE"
-side = "BOTH"
+side = "CLIENT"
