@@ -6,9 +6,3 @@ ReBlend makes 1.20+ possible in all modpacks, the only purpose.
 If the creator makes a update using this update, the mod will be taken down and or archived.
 
 The main difference is that we use LGPL v3 because of Architectury API also having it.
-
-### Current Progress:
-Published on Modrinth 
-<br>Dependencies are loaded and building starts
-<br>Fixed error that somehow doesn't apply to 1.19.2 or they were updating the json within the jar *scary*
-<br>One error remaining, only around 5 more keyboard smashes remaining
