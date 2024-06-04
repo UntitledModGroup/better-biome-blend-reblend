@@ -925,16 +925,16 @@ public final class ColorBlending
         }
     }
 
-    public static void
+    public void
     generateColors(
-        Level         world,
-        ColorResolver colorResolver,
-        int           colorType,
-        ColorCache    colorCache,
-        BlendChunk    blendChunk,
-        int           x,
-        int           y,
-        int           z)
+            Level world,
+            ColorResolver colorResolver,
+            int colorType,
+            ColorCache colorCache,
+            BlendChunk blendChunk,
+            int x,
+            int y,
+            int z)
     {
         final int blendRadius = BetterBiomeBlendClient.getBiomeBlendRadius();
 
