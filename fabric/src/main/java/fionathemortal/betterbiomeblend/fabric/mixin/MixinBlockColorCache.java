@@ -4,7 +4,7 @@ import fionathemortal.betterbiomeblend.common.ColorCaching;
 import fionathemortal.betterbiomeblend.fabric.SodiumColorBlending;
 import it.unimi.dsi.fastutil.objects.Reference2ReferenceOpenHashMap;
 import me.jellysquid.mods.sodium.client.world.WorldSlice;
-import me.jellysquid.mods.sodium.client.world.biome.BlockColorCache;
+import me.jellysquid.mods.sodium.client.world.biome.BlockColorCache; //not available in sodium 0.5.0 / 0.5.8
 
 import net.minecraft.core.SectionPos;
 import net.minecraft.util.Mth;
@@ -18,7 +18,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.Shadow;
 
-@Mixin(value = BlockColorCache.class)
+@Mixin(value = BlockColorCache.class) //Do not use BCC, ln7
 public class MixinBlockColorCache
 {
     @Unique
