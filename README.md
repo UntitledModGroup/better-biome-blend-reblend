@@ -6,3 +6,6 @@ ReBlend makes 1.20+ possible in all modpacks, the only purpose.
 If the creator makes a update using this update, the mod will be taken down and or archived.
 
 The main difference is that we use LGPL v3 because of Architectury API also having it.
+
+### Why not 1.21?
+I am waiting on commiting myself to updating to 0.5.x versions of Sodium, if you would like to help, do a pull request.
