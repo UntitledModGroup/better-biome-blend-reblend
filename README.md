@@ -6,3 +6,9 @@ ReBlend makes 1.20+ possible in all modpacks, the only purpose.
 If the creator makes a update using this update, the mod will be taken down and or archived.
 
 The main difference is that we use LGPL v3 because of Architectury API also having it.
+
+# Branch Information
+
+This branch is made for updating to 5.x of Sodium. On top of that, adding support for Embeddium for Forge.
+
+Once this is achieved, it will be updated to 1.21 once pulled into main, adding a third mod loader, NeoForge.
