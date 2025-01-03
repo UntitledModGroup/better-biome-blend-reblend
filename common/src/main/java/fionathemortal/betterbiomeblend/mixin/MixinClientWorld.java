@@ -19,12 +19,12 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.level.storage.WritableLevelData;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.function.Supplier;
 
@@ -83,9 +83,9 @@ public abstract class MixinClientWorld extends Level
      * @author FionaTheMortal
      * @reason Overwrite the original method to use the custom color blending algorithm.
      */
-    @Overwrite
-    public int
-    getBlockTint(BlockPos blockPosIn, ColorResolver colorResolverIn)
+    @Inject(method = "getBlockTint", at = @At("HEAD"), cancellable = true)
+    public void
+    getBlockTint(BlockPos blockPosIn, ColorResolver colorResolverIn, CallbackInfoReturnable<Integer> cir)
     {
         final int x = blockPosIn.getX();
         final int y = blockPosIn.getY();
@@ -177,6 +177,6 @@ public abstract class MixinClientWorld extends Level
             color = chunk.data[index];
         }
 
-        return color;
+        cir.setReturnValue(color);
     }
 }
