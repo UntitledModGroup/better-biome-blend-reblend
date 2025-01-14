@@ -1,6 +1,6 @@
 package fionathemortal.betterbiomeblend.mixin.sodium;
 
-import net.caffeinemc.mods.sodium.client.world.LevelSlice;
+import me.jellysquid.mods.sodium.client.world.WorldSlice;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockAndTintGetter;
@@ -10,9 +10,9 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 
-@Mixin(value = LevelSlice.class, remap = false)
+@Mixin(value = WorldSlice.class, remap = false)
 public abstract class MixinLevelSlice implements BlockAndTintGetter {
-    @Shadow(remap = false) @Final private ClientLevel level;
+    @Shadow(remap = false) @Final private WorldSlice level;
 
     /**
      * @author icanttellyou
