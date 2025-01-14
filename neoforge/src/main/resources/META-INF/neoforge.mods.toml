@@ -12,6 +12,7 @@ modId = "betterbiomeblend"
 version = "${version}"
 displayName = "Better Biome Reblend"
 authors = "FionaTheMortal + UTMG"
+logoFile = "icon.png"
 description = '''
 This mod increases the biome color blending radius and replaces the original blending algorithm with a more efficient one.
 '''
