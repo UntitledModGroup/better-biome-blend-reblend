@@ -8,16 +8,17 @@ license = "GNU LGPLv3"
 config = "betterbiomeblend-common.mixins.json"
 
 [[mods]]
-modId = "betterbiomeblend"
+modId = "betterbiomereblend"
 version = "${version}"
 displayName = "Better Biome Reblend"
 authors = "FionaTheMortal + UTMG"
+logoFile = "icon.png"
 description = '''
 This mod increases the biome color blending radius and replaces the original blending algorithm with a more efficient one.
 '''
 #logofile = ""
 
-[[dependencies.betterbiomeblend]]
+[[dependencies.betterbiomereblend]]
 modId="minecraft"
 versionRange="[1.20,)"
 ordering="NONE"
