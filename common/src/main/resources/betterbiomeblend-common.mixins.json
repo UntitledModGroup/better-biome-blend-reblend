@@ -6,7 +6,7 @@
     "MixinClientWorld",
     "MixinOptions",
     "MixinVideoSettingsScreen",
-    "sodium.MixinLevelSlice",
+    "sodium.MixinWorldSlice",
     "sodium.MixinSodiumGameOptionPages"
   ],
   "injectors": {

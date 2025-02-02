@@ -11,8 +11,8 @@ import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 
 @Mixin(value = WorldSlice.class, remap = false)
-public abstract class MixinLevelSlice implements BlockAndTintGetter {
-    @Shadow(remap = false) @Final private WorldSlice level;
+public abstract class MixinWorldSlice implements BlockAndTintGetter {
+    @Shadow(remap = false) @Final private ClientLevel world;
 
     /**
      * @author icanttellyou
@@ -20,6 +20,6 @@ public abstract class MixinLevelSlice implements BlockAndTintGetter {
      */
     @Overwrite
     public int getBlockTint(BlockPos pos, ColorResolver resolver) {
-        return level.getBlockTint(pos, resolver);
+        return world.getBlockTint(pos, resolver);
     }
 }

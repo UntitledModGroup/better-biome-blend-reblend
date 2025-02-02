@@ -19,12 +19,12 @@ This mod increases the biome color blending radius and replaces the original ble
 
 [[dependencies.betterbiomeblend]]
 modId="minecraft"
-versionRange="[1.21,)"
+versionRange="[1.20,)"
 ordering="NONE"
 side = "CLIENT"
 
 [[dependencies.betterbiomeblend]]
-modId = "neoforge"
-versionRange = "[21,)"
+modId = "forge"
+versionRange = "[20,)"
 ordering = "NONE"
 side = "CLIENT"
