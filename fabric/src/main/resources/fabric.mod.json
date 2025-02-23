@@ -12,7 +12,7 @@
     "homepage": "https://discord.gg/xrcraft-947244318740054149",
     "sources": "https://github.com/UntitledModGroup/better-biome-blend-reblend"
   },
-  "license": "LGPL",
+  "license": "GNU LGPL v3",
   "icon": "icon.png",
   "environment": "*",
   "entrypoints": {

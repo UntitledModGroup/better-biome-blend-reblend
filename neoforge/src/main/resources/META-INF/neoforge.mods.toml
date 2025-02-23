@@ -2,7 +2,7 @@ modLoader = "javafml"
 loaderVersion = "[1,)"
 issueTrackerURL = "https://github.com/UntitledModGroup/better-biome-blend-reblend/issues"
 displayURL = "https://modrinth.com/mod/bbrb"
-license = "GNU LGPLv3"
+license = "GNU LGPL v3"
 
 [[mixins]]
 config = "betterbiomeblend-common.mixins.json"
