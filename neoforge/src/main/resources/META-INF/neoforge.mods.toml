@@ -16,7 +16,6 @@ logoFile = "icon.png"
 description = '''
 This mod increases the biome color blending radius and replaces the original blending algorithm with a more efficient one.
 '''
-#logofile = ""
 
 [[dependencies.betterbiomereblend]]
 modId="minecraft"
