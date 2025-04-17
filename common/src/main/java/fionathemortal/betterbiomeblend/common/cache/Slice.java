@@ -9,7 +9,6 @@ public abstract class Slice
     public long key;
     public int  size;
     public int  salt;
-    public int  age;
 
     public AtomicInteger refCount = new AtomicInteger();
 

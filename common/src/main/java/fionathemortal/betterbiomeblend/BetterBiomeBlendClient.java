@@ -37,7 +37,7 @@ public final class BetterBiomeBlendClient
     registerCommands(CommandDispatcher<CommandSourceStack> dispatcher)
     {
         LiteralArgumentBuilder<CommandSourceStack> benchmarkCommand = Commands
-            .literal("betterbiomeblend")
+            .literal("betterbiomereblend")
             .then(Commands.literal("toggleBenchmark")
             .executes(
                 context ->
@@ -51,7 +51,7 @@ public final class BetterBiomeBlendClient
                         if (player != null)
                         {
                             player.displayClientMessage(
-                                Component.literal("Started benchmark. Stop with /betterbiomeblend toggleBenchmark"),
+                                Component.literal("Started benchmark. Stop with /betterbiomereblend toggleBenchmark"),
                                 false);
                         }
                     }

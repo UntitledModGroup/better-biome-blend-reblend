@@ -2,7 +2,7 @@ modLoader = "javafml"
 loaderVersion = "[1,)"
 issueTrackerURL = "https://github.com/UntitledModGroup/better-biome-blend-reblend/issues"
 displayURL = "https://modrinth.com/mod/bbrb"
-license = "GNU LGPLv3"
+license = "GNU LGPL v3"
 
 [[mixins]]
 config = "betterbiomeblend-common.mixins.json"
@@ -16,7 +16,6 @@ logoFile = "icon.png"
 description = '''
 This mod increases the biome color blending radius and replaces the original blending algorithm with a more efficient one.
 '''
-#logofile = ""
 
 [[dependencies.betterbiomereblend]]
 modId="minecraft"
@@ -24,7 +23,7 @@ versionRange="[1.20,)"
 ordering="NONE"
 side = "CLIENT"
 
-[[dependencies.betterbiomeblend]]
+[[dependencies.betterbiomereblend]]
 modId = "forge"
 versionRange = "[20,)"
 ordering = "NONE"

@@ -3,16 +3,17 @@
   "id": "betterbiomeblend",
   "version": "${version}",
   "name": "Better Biome ReBlend",
-  "description": "    This mod increases the biome color blending radius and replaces the original blending algorithm with a more efficient one.",
+  "description": "This mod increases the biome color blending radius and replaces the original blending algorithm with a more efficient one.",
   "authors": [
     "FionaTheMortal",
     "UTMG"
   ],
   "contact": {
-    "homepage": "https://discord.gg/xrcraft-947244318740054149",
-    "sources": "https://github.com/UntitledModGroup/better-biome-blend-reblend"
+    "homepage": "https://modrinth.com/mod/bbrb",
+    "sources": "https://github.com/UntitledModGroup/better-biome-blend-reblend",
+    "issues": "https://github.com/UntitledModGroup/better-biome-blend-reblend/issues"
   },
-  "license": "LGPL",
+  "license": "GNU LGPL v3",
   "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
