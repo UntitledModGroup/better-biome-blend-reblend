@@ -6,7 +6,7 @@ plugins {
 
 forgix {
     group = "fionathemortal.betterbiomeblend"
-    mergedJarName = "betterbiomeblend-${minecraft_version}-${mod_version}.jar"
+    mergedJarName = "betterbiomeblend-${minecraft_version}-${version}.jar"
     outputDir = "build/libs/merged"
 }
 
@@ -41,7 +41,7 @@ subprojects {
             archivesName = rootProject.archives_base_name
         }
 
-        version = rootProject.mod_version
+        version = rootProject.version
         group = rootProject.maven_group
 
         repositories {
