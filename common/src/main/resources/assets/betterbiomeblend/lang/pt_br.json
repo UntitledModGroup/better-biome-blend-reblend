@@ -1,0 +1,14 @@
+{
+  "options.biomeBlendRadius.17": "17x17 (Grande)",
+  "options.biomeBlendRadius.19": "19x19 (Muito Grande)",
+  "options.biomeBlendRadius.21": "21x21 (Massivo)",
+  "options.biomeBlendRadius.23": "23x23 (Estonteante)",
+  "options.biomeBlendRadius.25": "25x25 (Criminoso)",
+  "options.biomeBlendRadius.27": "27x27 (Elevado)",
+  "options.biomeBlendRadius.29": "29x29 (UAU!)",
+
+  "bbb.biomeBlendRadius" : "Better Biome ReBlend",
+  "bbb.biomeBlendRadius.tooltip": "Controls the blend radius used by Better Biome ReBlend.",
+
+  "comment": "This file was mostly taken from https://github.com/FionaTheMortal/better-biome-blend/pull/72 where the project is under Unlicense."
+}
