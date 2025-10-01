@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 
-@Mixin(value = WorldSlice.class, remap = false)
+@Mixin(WorldSlice.class)
 public abstract class MixinWorldSlice {
     @Shadow(remap = false) @Final private ClientLevel world;
 
@@ -19,7 +19,7 @@ public abstract class MixinWorldSlice {
      * @author AlphaMode
      * @reason Use vanilla method
      */
-    @Overwrite
+    @Overwrite(remap = false)
     public int getColor(BiomeColorSource source, int x, int y, int z) {
         BlockPos pos = new BlockPos(x, y, z);
         return switch (source) {
@@ -30,7 +30,7 @@ public abstract class MixinWorldSlice {
     }
 
     /**
-     * @author AlphaMode
+     * @author icanttellyou
      * @reason Use vanilla method
      */
     @Overwrite
