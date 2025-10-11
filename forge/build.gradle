@@ -9,6 +9,9 @@ architectury {
 
 loom {
     accessWidenerPath = project(":common").loom.accessWidenerPath
+    forge {
+        mixinConfig "betterbiomeblend-common.mixins.json"
+    }
 }
 
 configurations {
