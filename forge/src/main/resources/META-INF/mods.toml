@@ -4,11 +4,18 @@ issueTrackerURL = "https://github.com/UntitledModGroup/better-biome-blend-reblen
 displayURL = "https://modrinth.com/mod/bbrb"
 license = "GNU LGPLv3"
 
+[[mixins]]
+config = "betterbiomeblend-common.mixins.json"
+
 [[mods]]
 modId = "betterbiomereblend"
 version = "${version}"
 displayName = "Better Biome Reblend"
-authors = "FionaTheMortal + UTMG"
+authors = '''
+FionaTheMortal
+UTMG
+AlphaMode
+'''
 logoFile = "icon.png"
 description = '''
 This mod increases the biome color blending radius and replaces the original blending algorithm with a more efficient one.

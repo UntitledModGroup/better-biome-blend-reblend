@@ -8,6 +8,9 @@
     "FionaTheMortal",
     "UTMG"
   ],
+  "contributors": [
+    "AlphaMode (Sodium Fix for 0.5.x)"
+  ],
   "contact": {
     "homepage": "https://modrinth.com/mod/bbrb",
     "sources": "https://github.com/UntitledModGroup/better-biome-blend-reblend",
