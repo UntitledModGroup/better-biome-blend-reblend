@@ -17,6 +17,8 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 
 import java.util.List;
 
+// todo: its literally all gone, redo this entire mixin
+
 @Mixin(value = SodiumGameOptionPages.class, remap = false)
 public class MixinSodiumGameOptionPages
 {
