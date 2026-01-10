@@ -10,7 +10,7 @@ import net.minecraft.client.Options;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.player.Player;import java.util.Optional;
+import net.minecraft.world.entity.player.Player;
 
 public final class BetterBiomeBlendClient
 {
