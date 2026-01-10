@@ -120,7 +120,7 @@ public final class ColorBlending
     {
         Biome result = null;
 
-        Holder<Biome> biomeHolder = world.registryAccess().registryOrThrow(Registries.BIOME).getHolderOrThrow(Biomes.PLAINS);
+        Holder<Biome> biomeHolder = world.registryAccess().lookupOrThrow(Registries.BIOME).getOrThrow(Biomes.PLAINS);
 
         if (biomeHolder.isBound())
         {

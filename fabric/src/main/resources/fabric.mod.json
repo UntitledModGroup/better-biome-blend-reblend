@@ -19,6 +19,9 @@
   "entrypoints": {
     "client": [
       "fionathemortal.betterbiomeblend.fabric.BetterBiomeBlendFabric"
+    ],
+    "sodium:config_api_user": [
+      "fionathemortal.betterbiomeblend.sodium.SodiumConfigEntrypoint"
     ]
   },
   "mixins": [
@@ -26,6 +29,6 @@
   ],
   "depends": {
     "fabric-api": "*",
-    "minecraft": "1.21.x"
+    "minecraft": "=1.21.11"
   }
 }

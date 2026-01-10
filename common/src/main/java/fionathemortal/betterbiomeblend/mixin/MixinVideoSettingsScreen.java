@@ -9,7 +9,7 @@ import net.minecraft.client.gui.screens.options.VideoSettingsScreen;
 import net.minecraft.network.chat.Component;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.ModifyArg;
+import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(value = VideoSettingsScreen.class)
 public abstract class MixinVideoSettingsScreen extends OptionsSubScreen
@@ -20,17 +20,14 @@ public abstract class MixinVideoSettingsScreen extends OptionsSubScreen
         super(screen, options, component);
     }
 
-    @ModifyArg(method = "addOptions", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/components/OptionsList;addBig(Lnet/minecraft/client/OptionInstance;)V", ordinal = 1), index = 0)
-    private OptionInstance<?>
-    modifyAddBig(OptionInstance<?> argument)
-    {
-        OptionInstance<?> result = argument;
-
-        if (argument == this.options.biomeBlendRadius())
-        {
-            result = BetterBiomeBlendClient.betterBiomeBlendRadius;
-        }
-
-        return result;
+    @Redirect(
+        method = "qualityOptions",
+        at = @At(
+            value = "INVOKE",
+            target = "Lnet/minecraft/client/Options;biomeBlendRadius()Lnet/minecraft/client/OptionInstance;"
+        )
+    )
+    private static OptionInstance<Integer> modifyBiomeBlendRadius(Options instance) {
+        return BetterBiomeBlendClient.betterBiomeBlendRadius();
     }
 }

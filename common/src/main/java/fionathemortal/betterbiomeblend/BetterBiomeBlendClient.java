@@ -14,7 +14,7 @@ import net.minecraft.world.entity.player.Player;
 
 public final class BetterBiomeBlendClient
 {
-    public static OptionInstance<Integer> betterBiomeBlendRadius = new OptionInstance<>(
+    private static OptionInstance<Integer> betterBiomeBlendRadius = new OptionInstance<>(
         "options.biomeBlendRadius",
         OptionInstance.noTooltip(),
         (component, integer) -> {
@@ -31,6 +31,10 @@ public final class BetterBiomeBlendClient
     getBiomeBlendRadius()
     {
         return betterBiomeBlendRadius.get();
+    }
+
+    public static OptionInstance<Integer> betterBiomeBlendRadius() {
+        return betterBiomeBlendRadius;
     }
 
     public static void
